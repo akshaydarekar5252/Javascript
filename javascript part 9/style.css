@@ -1,16 +1,34 @@
-body {
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}
+
+
+/* body {
     font-family: Arial;
   }
   
+.green{
+  color: green;
+  text-decoration: underline black wavy;
+}
+
   #mainImg {
     width: 35%;
   }
   
+ 
   .box {
     border: 0.25px solid black;
     background-color: lightgray;
     width: 200px;
     padding: 1rem;
+  }
+  
+  .yellowBg{
+    background-color: yellow;
   }
   
   .boxLink {
@@ -25,4 +43,4 @@ body {
   
   #description {
     background-color: antiquewhite;
-  } 
+  }  */
