@@ -182,15 +182,39 @@
 
 // form events 
 
+// let form = document.querySelector('form');
+// form.addEventListener('submit',function (event){
+//     event.preventDefault();
+    
+//     //extracting data from the form
+
+//     let user = document.querySelector('#username');
+//     let pass = document.querySelector('#password');
+//     console.log(user.value);
+//     console.log(pass.value);
+//     alert( `hi ${user.value} your password is ${pass.value}`);
+// });
+
+
+
+
+//more events 
+
+// change event and input event 
 let form = document.querySelector('form');
 form.addEventListener('submit',function (event){
     event.preventDefault();
-    
-    //extracting data from the form
+});
+let user = document.querySelector('#username');
+let pass = document.querySelector('#password');
 
-    let user = document.querySelector('#username');
-    let pass = document.querySelector('#password');
-    console.log(user.value);
-    console.log(pass.value);
-    alert( `hi ${user.value} your password is ${pass.value}`);
+user.addEventListener('change',function (){
+    console.log('Username changed');
+    console.log( "final value = ",this.value);
+
+});
+user.addEventListener('input',function (){
+    console.log('input changed');
+    console.log( "final value = ",this.value);
+
 });
