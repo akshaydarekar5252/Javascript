@@ -86,15 +86,66 @@
 //json
 
 
-let jsonRes ='{"fact":"Cats have 300 million neurons; dogs have about 160 million","length":58}';
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact);
+// let jsonRes ='{"fact":"Cats have 300 million neurons; dogs have about 160 million","length":58}';
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes.fact);
 
 
-let obj = {
-    name: "John",
-    age: 30,
-    city: "New York"
-};
-let validJson = JSON.stringify(obj);
-console.log(validJson);
+// let obj = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+// };
+// let validJson = JSON.stringify(obj);
+// console.log(validJson);
+
+
+
+
+//Our first API request using fetch
+
+let url = "https://catfact.ninja/fact";
+// fetch(url)
+// .then((response)=>{
+    
+//     return response.json();
+   
+// })
+// .then((data)=>{
+//     console.log( "data 1 = ",data.fact);
+//     return fetch(url);
+// })
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data2)=>{
+//     console.log( "data 2 =",data2.fact);
+// })
+// .catch((err)=>{
+//     console.log("Something went wrong",err);
+// });
+
+// console.log("i will run first");
+
+
+
+
+
+//using fetch with async await
+
+async function getFact(){
+    try{
+        let res =  await fetch(url);
+        let data = await res.json();
+        console.log(data.fact);
+
+        let res2 =  await fetch(url);
+        let data2 = await res2.json();
+        console.log(data2.fact);
+        
+    }catch(err){
+        console.log("Something went wrong",err);
+    }
+   console.log("bye");
+}
+
