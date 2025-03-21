@@ -94,7 +94,7 @@ function show(collages){
 
         let li = document.createElement("li");
         li.innerText= col.name;
-        list.appendChild(li);
+        list.appendChild(li); // showa on the screen 
     }
 } 
 
